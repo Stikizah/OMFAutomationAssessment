@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Checkers Web All PREP" parallel="tests" thread-count="5" verbose="1">
+
+    <listeners>
+        <listener class-name="OMF.utilities.TestListener"/>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+    <test name="Old Mutual Automation Assessment Chrome">
+        <parameter name="excelData" value="OMFAutomationTestData.xlsx"/>
+        <parameter name="browserType" value="chrome"/>
+        <parameter name="appURL" value="https://www.oldmutualfinance.co.za/"/>
+        <classes>
+            <class name="tests.OMFBasePageTest"/>
+        </classes>
+    </test>
+<!--    <test name="Firefox Desktop PREP">-->
+<!--        <parameter name="excelData" value="OMFAutomationTestData.xlsx"/>-->
+<!--        <parameter name="browserType" value="firefox"/>-->
+<!--        <parameter name="appURL" value="https://www.oldmutualfinance.co.za/"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.OMFBasePageTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Safari Desktop">-->
+<!--        <parameter name="excelData" value="DesktopTestController.xlsx"/>-->
+<!--        <parameter name="browserType" value="safari"/>-->
+<!--        <parameter name="appURL" value="https://foxbrewards.prep.shopritelabs.co.za"/>-->
+<!--        <classes>-->
+<!--            <class name="com.tests.OMFBasePageTest"/>-->
+<!--        </classes>-->
+
+</suite>
